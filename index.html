@@ -56,9 +56,21 @@ function checkCookie() {
 
 
 
+function addZero(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
 
-let d = new Date();
-document.body.innerHTML = "<h2>Зараз у Києві:  " + d.getHours() + ":" + d.getMinutes()"</h2>"
+function myFunction() {
+    var d = new Date();
+    var x = document.getElementById("demo");
+    var h = addZero(d.getHours());
+    var m = addZero(d.getMinutes());
+    
+    x.innerHTML = "Зараз у Києві:" + h + ":" + m;
+}
 
 
 var h=(new Date()).getHours();
