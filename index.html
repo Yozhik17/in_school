@@ -125,6 +125,13 @@ function cleartids() {
 		</div>
 		<div class="article">
 			<img src="images/in_school.png" alt="" style="width:300px; height:300px">
+			<script>			
+			var h=(new Date()).getHours();
+			if (h > 3 && h <  12) document.writeln("<h2>Добрий ранок!</h2>"); 
+			if (h > 11 && h <  19) document.writeln("<h2>Добрий день!</h2>"); 
+			if (h > 18 && h <  24) document. writeln("<h2>Добрий вечір!</h2>"); 
+			if (h > 23 || h <  4 ) document.wtriteln("<h2>Доброї ночі!</h2>" ) ; 
+			</script>
 			<h1>Вас вітає навчальний портал IN_SCHOOL!</h1>
 		</div>
 	</div>
@@ -149,7 +156,7 @@ function cleartids() {
 		<div>
 			<div class="connect">
 				
-				&copy; Kyiv 2018 | Olexandra Iliuschenko
+				&copy; Kyiv 2018 | Olexandra Iliushchenko
 			</p>
 		</div>
 	</div>
