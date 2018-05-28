@@ -15,8 +15,7 @@ $tbManagerPassword="123456";
 
 // API Token, который вы получили у @BotFather
 // API Token, you can get it from user @BotFather (in Telegram App)
-$tbAPIToken="601082122:AAHdY5pex69garvpja9g1zu4oEAxS6YtDdw
-";
+$tbAPIToken="601082122:AAHdY5pex69garvpja9g1zu4oEAxS6YtDdw";
 
 // Название языкового файла (в папке /localization)
 // Name of localization file (you can find it in /localization folder)
