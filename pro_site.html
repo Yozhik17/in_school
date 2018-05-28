@@ -7,6 +7,20 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="chat.js"></script>
 </head>
+	
+<script>
+function myFunction(x) {
+    if (x.matches) { 
+        document.body.style.backgroundColor = "grey";
+    } else {
+        document.body.style.backgroundColor = "pink";
+    }
+}
+var x = window.matchMedia("(max-width: 1000px)")
+myFunction(x) 
+x.addListener(myFunction)
+</script>
+	
 <body>
 	<div id="header">
 		<div class="section">
