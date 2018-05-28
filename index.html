@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Навчальний портал in_school</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/slinky.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/slinky.min.js"></script>
+<script type="text/javascript" src="http://fm-u.com/embed/radio.js"></script>
+
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000" onload="start(document.forms[0]); checkCookie()"
+onunload="cleartids()">
+
+<script>
+
+
+
+ 
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Раді бачити Вас знову, " + user);
+    } else {
+       user = prompt("Введіть, будь ласка, ваше ім'я:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+
+
+
+let d = new Date();
+document.body.innerHTML = "<h2>Зараз у Києві:  " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+"</h2>"
+
+
+var h=(new Date()).getHours();
+if (h > 3 && h <  12) document.writeln("<h2>Добрий ранок!</h2>"); 
+if (h > 11 && h <  19) document.writeln("<h2>Добрий день!</h2>"); 
+if (h > 18 && h <  24) document. writeln("<h2>Добрий вечір!</h2>"); 
+if (h > 23 || h <  4 ) document.wtriteln("<h2>Доброї ночі!</h2>" ) ; 
+
+timestr = "00:00:00";
+tid = 0;
+pause = 0;
+var to;
+var bcount;
+var tcount;
+function writer(){
+document.write("test"); 
+}
+function time(n) {
+    tid=window.setTimeout("time(1)",to);
+    today = new Date()
+    if(today.getMinutes() < 10){ 
+        pad = "0"}
+    else  
+    pad = "";
+    if(today.getSeconds() < 10){ 
+        pads = "0"}
+    else  
+    pads = "";
+timestr=today.getHours()+":"+pad+today.getMinutes()+":"+pads+today.getSeconds();
+                document.title = timestr;
+		window.clearTimeout(tid);
+		tid=window.setTimeout("time()",to);
+}
+function start(x) {
+		f=x;
+                to=60;
+		time(x);
+		}
+function cleartids() {
+	window.clearTimeout(tid);
+}
+
+</script>
+
+	<div id="header">
+		<div class="section">
+			<div class="logo">
+				<a href="index.html">in_school</a>
+			</div>
+			<ul>
+				<li class="selected">
+					<a href="index.html">Головна</a>
+				</li>
+				<li>
+					<a href="mon.html">Розваги</a>
+				</li>
+				<li>
+			
+				</li>
+				<li>
+					<a href="news.html">Новини</a>
+				</li>
+				<li>
+					<a href="pro_site.html">Про сайт</a>
+				</li>
+			</ul>
+		</div>
+		<div class="article">
+			<img src="images/in_school.png" alt="" style="width:300px; height:300px">
+			<h1>Вас вітає навчальний портал IN_SCHOOL!</h1>
+		</div>
+	</div>
+	<div id="body">
+		<ul>
+			<li>
+				<a href="2_4.html"><img src="images/pe.png" alt="" style="widht:190px; height:170px"></a>
+			</li>
+			<li>
+				<a href="5_9.html"><img src="images/se.png" alt="" style="widht:190px; height:170px"></a>
+			</li>
+			<li>
+				<a href="10_11.html"><img src="images/ste.png" alt="" style="widht:190px; height:170px"></a>
+			</li>
+			<li>
+				<a href="o_r.html"><img src="images/or.png" alt="" style="widht:190px; height:170px"></a>
+			</li>
+		</ul>
+			<div id="footer">
+		<div>
+			<div class="connect">
+				
+				&copy; Kyiv 2018 | Olexandra Iliuschenko
+			</p>
+		</div>
+	</div>
+</body>
+</html>
