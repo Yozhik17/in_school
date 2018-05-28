@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Про сайт</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="chat.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -46,6 +48,12 @@
 	</div>
 
 	
+	<div id="telegramSiteHelper_box">
+		<input id="telegramSiteHelper_lastMId" type="hidden" value="">
+		<audio preload="auto" id="telegramSiteHelper_chatSound"><source src="telegramSiteHelper_chat.mp3"></source></audio>
+		<div id="telegramSiteHelper_chatWrapper"><div id="telegramSiteHelper_chatInner"><ul id="telegramSiteHelper_chatMessages"><li id="telegramSiteHelper_firstChatMsg">Если у вас есть вопрос, можете задать его здесь</li></ul></div></div>
+    <input id="telegramSiteHelper_chatTextBox" placeholder="Введите сообщение и нажмите Enter"></input>
+    </div>
 	
 	
 	<div id="footer">
